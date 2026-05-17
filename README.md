@@ -10,5 +10,7 @@ Website of all time
 how  to run!
 
 clone repo, navigate to project folder: cd gned-website
+
 install dependencies: npm install
+
 run: npm run dev
