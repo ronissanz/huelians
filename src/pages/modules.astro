@@ -4,25 +4,25 @@ import Layout from '../layouts/Layout.astro';
 // Updated data for Cycle Theory Chapters
 const chapters = [
 	{ 
-		id: '01', 
-		title: 'The Foundations of Cycle Theory', 
-		desc: 'An introduction to cyclical time vs. linear time. Understand the fundamental theories of how societies, economies, and nature operate in repeating patterns.',
+		id: '1', 
+		title: 'Foundations and Early Growth', 
+		desc: "This chapter explains that globalization isn't a straight line, but a repeating wave that rises and falls, introducing the fact that the average civilization only lasts about 275 years. It covers the very beginning of the cycle, showing how a global system kicks off through Phase Mixture (cultures blending) and Gestation (trade foundations settling) to build up early economic speed.",
 		featured: true
 	},
 	{ 
-		id: '02', 
-		title: 'Generational Cycles', 
-		desc: 'Exploring the Strauss-Howe generational theory: Highs, Awakenings, Unravelings, and Crises.' 
+		id: '2', 
+		title: 'Expansion and Peak Hubris', 
+		desc: 'This section focuses on the golden age of the cycle and the dangerous turning point that follows. It details the Expansion and Prosperity phase where borders open and wealth grows, but quickly transitions into Conflict, Overshoot, and Hubris, showing what happens when dominant powers get too big and push the system past its structural limits.' 
 	},
 	{ 
-		id: '03', 
-		title: 'Economic Supercycles', 
-		desc: 'Deep dive into Kondratiev waves, market booms, and the inevitable busts of global economies.' 
+		id: '3', 
+		title: 'Totalitarian Control and Collapse', 
+		desc: 'This chapter looks at the final dark stages of the cycle where the failing system completely breaks down. It breaks down the Totalitarian phase, explaining how ruling elites use extreme regulations to desperately hold onto power, and shows why these forced measures inevitably fail and lead to a total structural collapse that resets the clock.' 
 	},
 	{ 
-		id: '04', 
-		title: 'The Future: Breaking the Loop?', 
-		desc: 'Can technological singularity and AI disrupt historical cycles, or are we doomed to repeat them?' 
+		id: '4', 
+		title: 'The Modern Cycle Case Study', 
+		desc: "The final chapter applies this entire four-chapter framework directly to our world today as a real-world test case. By tracking our current globalization cycle from its start at the Peace of Westphalia in 1648, it proves that our current global financial drama and political chaos aren't random accidents—they happen because our system is 375 years old and well past its expiration date." 
 	},
 ];
 ---
@@ -43,7 +43,7 @@ const chapters = [
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pb-24">
 			{chapters.map((chapter) => (
 				<a 
-					href="#" 
+					href={`/chapters/${chapter.id}`} 
 					class={`group relative block p-8 rounded-3xl bg-slate-900/50 backdrop-blur-sm border border-white/5 hover:border-cyan-500/30 transition-all duration-300 hover:-translate-y-1 overflow-hidden
 						${chapter.featured ? 'md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800' : 'md:col-span-1'}
 					`}
@@ -58,9 +58,6 @@ const chapters = [
 							<h2 class={`font-bold text-white mb-4 leading-snug group-hover:text-cyan-300 transition-colors ${chapter.featured ? 'text-3xl md:text-4xl' : 'text-2xl'}`}>
 								{chapter.title}
 							</h2>
-							<p class="text-slate-400 leading-relaxed font-light">
-								{chapter.desc}
-							</p>
 						</div>
 						
 						<div class="mt-8 flex items-center text-sm font-medium text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">

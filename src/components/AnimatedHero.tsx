@@ -18,12 +18,12 @@ export default function AnimatedHero() {
 
   return (
     <div className="relative min-h-[calc(100vh-12rem)] w-full flex flex-col items-center justify-center mt-8">
-      
+
       {/* THE FIX 1: Softer Grid 
           Changed the color to a very faint white (0.03 opacity) and made the squares slightly larger.
       */}
       <div className="fixed inset-0 z-[-1] bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-      
+
       <div className="fixed top-0 left-0 w-full flex justify-center pointer-events-none z-[-1]">
         <div className="w-[1000px] h-[500px] bg-cyan-500/15 blur-[120px] rounded-full translate-y-[-40%]" />
       </div>
@@ -44,11 +44,11 @@ export default function AnimatedHero() {
         {/* THE FIX 2: Text Clipping 
             Added `py-2` and `leading-tight` so the 'y' descender doesn't get chopped off by the background clip.
         */}
-        <motion.h1 
+        <motion.h1
           variants={item}
           className="text-6xl md:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-200 to-cyan-500 mb-6 py-2 leading-tight"
         >
-          Cycle Theory.
+          Cycle Theory
         </motion.h1>
 
         <motion.p variants={item} className="text-lg md:text-2xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto font-light">
@@ -57,7 +57,7 @@ export default function AnimatedHero() {
 
         <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
-            href="/modules" 
+            href="/modules"
             className={cn(
               "relative inline-flex h-14 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-950 group hover:-translate-y-1 transition-transform shadow-2xl shadow-cyan-500/20 w-full sm:w-auto"
             )}
@@ -67,7 +67,7 @@ export default function AnimatedHero() {
               Start the Lesson
             </span>
           </a>
-          
+
           <a href="/about" className="text-base font-medium text-slate-400 hover:text-cyan-400 transition-colors flex items-center gap-2 group">
             View Syllabus <span aria-hidden="true" className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
