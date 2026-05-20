@@ -33,20 +33,34 @@ export default function AnimatedHero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="relative z-10 text-center max-w-4xl px-4"
+        className="relative z-10 text-center max-w-4xl px-4 w-full"
       >
+        {/* Floating Particles */}
+        <motion.div
+          animate={{ y: [0, -20, 0], opacity: [0.3, 0.8, 0.3] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-10 left-[10%] md:left-[20%] w-2 h-2 rounded-full bg-cyan-400 blur-[1px] pointer-events-none"
+        />
+        <motion.div
+          animate={{ y: [0, -30, 0], opacity: [0.2, 0.6, 0.2] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-40 right-[5%] md:right-[15%] w-3 h-3 rounded-full bg-blue-400 blur-[2px] pointer-events-none"
+        />
+        <motion.div
+          animate={{ y: [0, -15, 0], opacity: [0.4, 0.9, 0.4] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          className="absolute bottom-10 left-[20%] md:left-[30%] w-1.5 h-1.5 rounded-full bg-cyan-300 pointer-events-none"
+        />
         <motion.div variants={item} className="mb-8 flex justify-center">
           <span className="px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300 text-sm font-semibold tracking-wide backdrop-blur-md shadow-[0_0_15px_rgba(6,182,212,0.15)]">
             ✨ GNED07 Interactive Lesson
           </span>
         </motion.div>
 
-        {/* THE FIX 2: Text Clipping 
-            Added `py-2` and `leading-tight` so the 'y' descender doesn't get chopped off by the background clip.
-        */}
         <motion.h1
           variants={item}
-          className="text-6xl md:text-8xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-200 to-cyan-500 mb-6 py-2 leading-tight"
+          whileHover={{ scale: 1.05, textShadow: "0px 10px 30px rgba(6,182,212,0.8)" }}
+          className="text-6xl md:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-cyan-100 to-cyan-600 mb-6 py-2 leading-tight drop-shadow-[0_0_15px_rgba(6,182,212,0.4)] cursor-default transition-all duration-300"
         >
           Cycle Theory
         </motion.h1>
