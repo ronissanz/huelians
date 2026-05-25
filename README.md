@@ -1,4 +1,4 @@
-# GNEDHub
+# DEEPed
 
 A digital interactive platform for GNED07, built with Astro and Tailwind CSS.
 Follows a "Dark Glassmorphism" aesthetic with a strict information hierarchy.

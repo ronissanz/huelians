@@ -16,56 +16,44 @@ import ScrollProgress from '../components/ScrollProgress.tsx';
             <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                 <!-- Left: Content -->
                 <div class="flex flex-col justify-center max-w-2xl">
-                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 1 &middot; 6 Min</span>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">GDP & The Speed of Growth</h2>
+                    <span class="text-cyan-500 text-[10px] font-bold uppercase tracking-widest mb-4 block">Module 1 &middot; National Output</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight leading-tight">GDP & The Speed of Growth</h2>
                     
-                    <div class="space-y-8">
-                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
-                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
-                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">GDP measures the total dollar value of everything a country produces, acting as the ultimate scorecard for national economic health.</p>
+                    <div class="space-y-10">
+                        <div class="border-l-2 border-cyan-500 pl-6">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">The Mechanics of National Scorekeeping</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light text-lg">Gross Domestic Product (GDP) measures the total monetary value of all finished goods and services produced within a country’s borders during a specific time period. It functions as the ultimate scorecard for a nation's economic output and operational health.</p>
                         </div>
                         
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Everyday Analogy
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">Think of GDP like a local bakery’s daily revenue. It counts the total value of all the bread, cakes, and coffee sold in a day. If revenue goes up, the bakery is thriving, the owner can hire more staff, and the town is happy. If revenue drops, the bakery has to cut back on flour orders and lay off the delivery driver. GDP is just this concept scaled up to an entire nation.</p>
+                        <div class="bg-slate-100/50 dark:bg-slate-800/50 p-6 rounded-xl font-mono text-sm text-center tracking-widest text-slate-700 dark:text-slate-300">
+                            GDP = C + I + G + NX
                         </div>
 
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Scannable Lesson
-                            </h3>
-                            <ul class="space-y-5">
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">The Big Four Ingredients:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">GDP is calculated by adding up Consumer Spending, Business Investment, Government Spending, and Net Exports.</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Real vs. Nominal:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">"Nominal" counts raw numbers. "Real" GDP adjusts for inflation, telling the true story of growth.</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">The Recession Trigger:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">When real GDP shrinks for two consecutive quarters, the economy officially enters a recession.</span>
-                                </li>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-6">Consider a local bakery’s daily operations. The shop tracks the total cash value of every loaf of sourdough, pastry, and cup of espresso sold to customers. When total daily revenue climbs, the bakery is highly productive: the owner comfortably orders more raw flour, schedules extra shifts, and injects money back into local suppliers. Conversely, if daily intake plummets, the owner must immediately contract operations, scale back ingredient orders, and lay off the delivery driver. GDP is this exact operational balance sheet, scaled up directly to the infrastructure of an entire nation.</p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">The Structural Pillars of Output</h3>
+                            <ul class="space-y-4">
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Consumer Spending (C):</strong> The total private expenditure by households on durable goods, non-durable goods, and services.</li>
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Business Investment (I):</strong> Capital allocations by private enterprises for future production infrastructure.</li>
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Government Spending (G):</strong> All state expenditures on public goods, infrastructure development, and state payrolls.</li>
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Net Exports (NX):</strong> The net balance of global trade, calculated as total domestic exports minus total foreign imports.</li>
                             </ul>
                         </div>
 
-                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
-                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> If a country imports significantly more goods than it exports to the rest of the world, how does that imbalance directly impact its overall GDP "score"?</p>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Real vs. Nominal Metrics and Market Contraction</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">A critical distortion in economic tracking occurs when relying on raw numbers alone. Nominal GDP evaluates total output using current, unadjusted market prices. Real GDP intentionally strips away monetary noise by adjusting raw output against a base-year price index to isolate true production volume.</p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">Returning to the bakery blueprint: if the storefront records a 10% increase in gross nominal revenue over twelve months, but the baseline market cost of industrial flour and utility power also spiked by exactly 10%, the bakery’s physical volume of production did not expand. It merely charged more currency for the exact same amount of physical bread. Real GDP accounts for this factor by deflating nominal figures against inflation indexes, revealing true systemic growth or stagnation.</p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">When a nation's Real GDP undergoes a sustained contraction for two consecutive fiscal quarters (a continuous six-month window), the system passes the technical threshold and officially enters a recession.</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Right: Interactive Sticky Zone -->
                 <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col">
-                    <div class="mb-6 flex justify-between items-center">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">The Bakery Economy Slider</h4>
-                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
-                    </div>
                     <div class="flex-grow w-full relative">
                         <GdpChart client:load />
                     </div>
@@ -77,55 +65,33 @@ import ScrollProgress from '../components/ScrollProgress.tsx';
         <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
             <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                 <div class="flex flex-col justify-center max-w-2xl">
-                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 2 &middot; 5 Min</span>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Inflation & The Invisible Tax</h2>
+                    <span class="text-cyan-500 text-[10px] font-bold uppercase tracking-widest mb-4 block">Module 2 &middot; Globalization Matrix</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight leading-tight">The Basics of Economic Globalization & Inequity</h2>
                     
-                    <div class="space-y-8">
-                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
-                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
-                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">Inflation is the gradual loss of purchasing power as the general price level of goods and services rises over time.</p>
+                    <div class="space-y-10">
+                        <div class="border-l-2 border-cyan-500 pl-6">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">System Integration Matrix</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light text-lg">According to the foundational structural framework outlined by economist <strong class="font-semibold text-slate-900 dark:text-white">István Benczés (2014)</strong>, economic globalization is defined as the increasing economic integration of national systems across the globe. This phenomenon manifests specifically through the accelerated, large-scale transborder movement of five structural flows: goods, services, capital, people, and specialized knowledge.</p>
                         </div>
                         
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Everyday Analogy
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">Imagine a cup of coffee stays the exact same physical size, but every year, the barista uses a slightly smaller measuring scoop for the beans. You hand over the exact same amount of money, but you get less caffeine. Inflation is the shrinking scoop; it means your money buys less today than it did yesterday.</p>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Structural Asymmetry and the Debt Trap</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">The expansion of global market integration does not distribute capital yields or systemic stability symmetrically. Historically, certain geographic sectors, industrial verticals, and socio-economic classes are structural losers within global economic competition.</p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">Developing, lower-income nations frequently operate at a severe disadvantage within this macro-framework. When global economic disruptions shock these vulnerable systems, their domestic populations suffer disproportionately. This structural strain intensifies mechanically when developing nations are legally forced to divert their finite domestic tax revenues away from internal infrastructure and public welfare to service external loan debts held by highly developed creditor nations. The macro-economy often functions as a system that is fundamentally uneven—highly profitable for core economies while structurally extractive for peripheral ones.</p>
                         </div>
 
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Scannable Lesson
-                            </h3>
-                            <ul class="space-y-5">
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Demand-Pull Inflation:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Too much money chasing too few goods. E.g., sudden bonuses spiking limited concert ticket prices.</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Cost-Push Inflation:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Occurs when the cost to produce goods rises (e.g., a drought making wheat expensive).</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Wage-Price Spiral:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">A dangerous loop where rising living costs cause demands for higher wages, forcing further price hikes.</span>
-                                </li>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">The Fiscal Ledger: Balance of Payments</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">Governments navigate this globalized landscape through their fiscal balance sheet, which directly impacts their domestic stability:</p>
+                            <ul class="space-y-4">
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Fiscal Surplus:</strong> Occurs when a state’s total consolidated tax revenues exceed its total public expenditures over a defined fiscal timeline.</li>
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Fiscal Deficit:</strong> Occurs when a government’s public sector spending outpaces its tax collections, forcing the state to issue sovereign bonds and accumulate national debt to cover the capital shortfall.</li>
                             </ul>
-                        </div>
-
-                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
-                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> Why might central banks argue that a tiny bit of predictable inflation (around 2% a year) is healthier than zero inflation or deflation?</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col">
-                    <div class="mb-6 flex justify-between items-center">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Time-Travel Shopping Basket</h4>
-                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
-                    </div>
                     <div class="flex-grow w-full relative">
                         <InflationChart client:load />
                     </div>
@@ -137,56 +103,51 @@ import ScrollProgress from '../components/ScrollProgress.tsx';
         <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
             <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                 <div class="flex flex-col justify-center max-w-2xl">
-                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 3 &middot; 7 Min</span>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Central Banks & The Cost of Money</h2>
+                    <span class="text-cyan-500 text-[10px] font-bold uppercase tracking-widest mb-4 block">Module 3 &middot; Networks</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight leading-tight">The Global Assembly Line</h2>
                     
-                    <div class="space-y-8">
-                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
-                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
-                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">Monetary Policy is how central banks control the supply of money and adjust interest rates to either stimulate a sluggish economy or cool down an overheated one.</p>
+                    <div class="space-y-10">
+                        <div class="border-l-2 border-cyan-500 pl-6">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Linear Chains and Distributed Networks</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light text-lg">Modern production has evolved from localized manufacturing into globally fragmented assembly systems. Understanding these mechanisms requires breaking down the core frameworks that organize how goods are made.</p>
                         </div>
                         
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Everyday Analogy
-                            </h3>
-                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">A Central Bank is like the driver of a car navigating a winding mountain road, using two pedals. The Gas Pedal (lowering interest rates) speeds up borrowing and spending. The Brake Pedal (raising interest rates) slows down borrowing to cool the engine.</p>
-                        </div>
-
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Scannable Lesson
-                            </h3>
-                            <ul class="space-y-5">
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">The Base Rate:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Central banks set the rate at which commercial banks lend to each other, dictating the cost of every mortgage and loan.</span>
+                            <ul class="space-y-6">
+                                <li>
+                                    <strong class="font-bold text-slate-900 dark:text-white text-lg block mb-1">Supply Chains</strong>
+                                    <p class="font-light text-slate-600 dark:text-slate-400 leading-relaxed">The foundational, end-to-end framework tracking value-adding activities throughout a production lifecycle. A supply chain initiates at the point of raw material extraction, processes those elements through intermediate stages of refinement, and passes through distinct logistical channels until a finished consumer object is delivered to the end-user.</p>
                                 </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Cheap Money:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Low rates make borrowing cheap. People buy houses, boosting GDP but risking inflation.</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Expensive Money:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">High rates make borrowing painful. Spending stops, crushing inflation but risking a recession.</span>
+                                <li>
+                                    <strong class="font-bold text-slate-900 dark:text-white text-lg block mb-1">International Production Networks</strong>
+                                    <p class="font-light text-slate-600 dark:text-slate-400 leading-relaxed mb-3">The complex, interconnected web of independent suppliers and producers working across borders to construct a single complex asset. This structure is perfectly illustrated by the commercial aircraft manufacturing sector:</p>
+                                    <ul class="space-y-2 pl-4 border-l border-slate-200 dark:border-slate-800">
+                                        <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">Nose & Forward Sections:</strong> Fabricated in Wichita, USA.</li>
+                                        <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">Main Wings:</strong> Precision engineered by aerospace teams in Japan.</li>
+                                        <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">Main Fuselage Modules:</strong> Manufactured across industrial centers in Italy and Japan.</li>
+                                        <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">Tail Assembly components:</strong> Sourced from specialized facilities in Texas and Europe.</li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
-                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> If the central bank hits the "brake pedal", who benefits immediately: someone saving cash, or someone trying to buy a house?</p>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Industrial Organization and Value Distribution</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-6">To understand how value and control are distributed across these global lines, economists rely on two advanced structural frameworks:</p>
+                            <ul class="space-y-6">
+                                <li class="font-light text-slate-600 dark:text-slate-400">
+                                    <strong class="font-semibold text-slate-900 dark:text-white block mb-1">Global Commodity Chains:</strong> Developed by sociologists <strong class="text-slate-900 dark:text-white">Gary Gereffi and Miguel Korzeniewicz</strong>, this concept fuses value-adding linear sequences with the macro-organization of international industries. This framework highlights the power held by downstream global sellers (such as multinational retail aggregators or commodity distributors) who control brand equity and distribution networks, dictating the financial terms to upstream manufacturers, such as those in the global oil supply chain.
+                                </li>
+                                <li class="font-light text-slate-600 dark:text-slate-400">
+                                    <strong class="font-semibold text-slate-900 dark:text-white block mb-1">Global Value Chains (GVCs):</strong> This architecture represents international production sharing, where manufacturing is sliced into discrete operational tasks executed in different countries based on specific efficiencies. GVCs are a macro-scale extension of the classical division of labor, dispersing distinct steps of production across specialized international boundaries to optimize corporate margins.
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col items-center justify-center">
-                    <div class="w-full mb-6 flex justify-between items-center absolute top-8 left-8 right-8 px-0">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Interest Rate Dashboard</h4>
-                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
-                    </div>
-                    <div class="w-full">
+                    <div class="w-full h-full">
                         <CentralBankDash client:load />
                     </div>
                 </div>
@@ -197,47 +158,45 @@ import ScrollProgress from '../components/ScrollProgress.tsx';
         <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
             <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                 <div class="flex flex-col justify-center max-w-2xl">
-                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 4 &middot; 6 Min</span>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Global Trade & The Ripple Effect</h2>
+                    <span class="text-cyan-500 text-[10px] font-bold uppercase tracking-widest mb-4 block">Module 4 &middot; Consumption</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-8 tracking-tight leading-tight">Global Demands, Outsourcing & Consumption</h2>
                     
-                    <div class="space-y-8">
-                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
-                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
-                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">The modern global economy relies on highly interconnected Supply Chains where countries specialize in specific industries.</p>
+                    <div class="space-y-10">
+                        <div class="border-l-2 border-cyan-500 pl-6">
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Commodity Competition and Demographic Shifts</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light text-lg">The global marketplace faces severe resource competition for vital agricultural and industrial commodities, including soybeans, wheat, and corn. Historically, global resource draw was dominated by traditional Western industrial powers. In the modern landscape, this consumption is driven by rapid industrial development and urbanization across previously underdeveloped regions of the global economy, permanently tightening global supply-demand balances.</p>
                         </div>
                         
                         <div>
-                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
-                                The Scannable Lesson
-                            </h3>
-                            <ul class="space-y-5">
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Comparative Advantage:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Countries trade because it's mathematically efficient. Specialization increases overall global output.</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Supply Chain Shocks:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">A single blocked canal or regional crisis can shut down factories half a world away due to "Just-in-Time" delivery.</span>
-                                </li>
-                                <li class="relative pl-6">
-                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
-                                    <strong class="text-slate-800 dark:text-slate-200">Tariffs & Protectionism:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Taxes on imported goods protect local jobs but inherently raise prices for everyday consumers.</span>
-                                </li>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Structural Levels of Outsourcing</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">Outsourcing is the formal transfer of specific internal activities, operations, or business units from a primary entity to an external enterprise in exchange for financial compensation. This structural optimization operates across three distinct systemic tiers:</p>
+                            <ul class="space-y-4">
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Micro-Level:</strong> Household Transition (e.g., Family Care ──► Daycare / Assisted Living)</li>
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Meso-Level:</strong> Local Enterprise B2B (e.g., Restaurant Kitchen ──► External Commissary)</li>
+                                <li class="font-light text-slate-600 dark:text-slate-400"><strong class="font-semibold text-slate-900 dark:text-white">Macro-Level:</strong> Multinational Offshoring (e.g., UK Corporation ──► Tech/Support Hubs in India)</li>
                             </ul>
                         </div>
-                        
-                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
-                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> If a government places a massive tariff on imported steel, who ultimately pays that tax?</p>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">The Consumption Ecosystem</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">Modern macroeconomics is heavily reliant on a continuous cycle of consumption, which refers to the structural purchase and utilization of goods and services by end consumers. This behavioral architecture is sustained by a distinct four-part ecosystem:</p>
+                            <ul class="space-y-3 pl-4 border-l border-slate-200 dark:border-slate-800">
+                                <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">The Consumers:</strong> The economic actors executing the transaction to fulfill personal demands.</li>
+                                <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">The Objects/Services:</strong> Physical commodities or digital services brought to market.</li>
+                                <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">The Process:</strong> The transactional workflow, increasingly reliant on extensive credit card networks, enabling hyper-consumption.</li>
+                                <li class="font-light text-sm text-slate-500 dark:text-slate-400"><strong class="font-medium text-slate-700 dark:text-slate-300">The Sites:</strong> Physical/virtual arenas engineered explicitly to facilitate transactions (e.g., Amazon).</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-100/50 dark:bg-slate-800/30 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Systemic Expansion & The Race to the Bottom</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light mb-4">To sustain its capital momentum, the modern global economy operates under what sociologist <strong class="font-semibold text-slate-900 dark:text-white">Immanuel Wallerstein (1989)</strong> identifies as the "pressure of incorporation." The capitalist world-economy cannot remain static; it is driven by internal pressures to continuously expand its external boundaries, absorbing new geographic territories, sovereign resources, and consumer populations into its structural domain.</p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">This expansion culminates in the <strong>"Race to the Bottom."</strong> To capture capital injections from multinational corporations, developing nation-states are forced to compete aggressively against one another by intentionally undercutting competitor countries—offering lower baseline wages, rolling back domestic environmental protections, tolerating substandard working conditions, and extending legal working hours.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col justify-center">
-                    <div class="w-full mb-6 flex justify-between items-center absolute top-8 left-8 right-8 px-0">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Supply Chain Network</h4>
-                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
-                    </div>
                     <GlobalTradeViz client:load />
                 </div>
             </div>
