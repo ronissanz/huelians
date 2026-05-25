@@ -1,10 +1,6 @@
-# DeepEd: Global Econ® 🌍
+# DeepEd: Global Econ® 
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-deeped.vercel.app-10B981?style=for-the-badge&logo=vercel)](https://deeped.vercel.app/)
-![Astro](https://img.shields.io/badge/Astro-0C111A?style=for-the-badge&logo=astro&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 An ultra-fast, high-end editorial learning platform. Currently featuring an interactive, magazine-style deep dive into the **Global Economy**. 
 
