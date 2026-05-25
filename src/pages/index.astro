@@ -29,7 +29,7 @@ import { BookOpen, FileText, PlayCircle, ExternalLink } from 'lucide-react';
             
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
                 <!-- Video Spotlight -->
-                <div class="md:col-span-8 group block bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl overflow-hidden hover:border-cyan-300 dark:hover:border-cyan-700 transition-all duration-300 cursor-pointer">
+                <a href="https://www.youtube.com/watch?v=PHe0bXAIuk0" target="_blank" rel="noopener noreferrer" class="md:col-span-8 group block bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl overflow-hidden hover:border-cyan-300 dark:hover:border-cyan-700 transition-all duration-300 cursor-pointer">
                     <div class="flex flex-col sm:flex-row h-full">
                         <!-- Left-side contextual preview/skeleton -->
                         <div class="sm:w-2/5 bg-slate-100/50 dark:bg-slate-800/50 border-r border-slate-200/50 dark:border-slate-700/50 relative flex items-center justify-center min-h-[200px] overflow-hidden">
@@ -45,16 +45,16 @@ import { BookOpen, FileText, PlayCircle, ExternalLink } from 'lucide-react';
                         <!-- Content -->
                         <div class="sm:w-3/5 p-8 flex flex-col justify-center">
                             <span class="text-xs font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-3">Video Spotlight</span>
-                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">Inside Turkey's $1.5 Billion Apricot Mega Farms</h3>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 leading-tight">How The Economic Machine Works (Ray Dalio)</h3>
                             <p class="text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-6">
-                                Brilliantly demonstrates the massive engineering and international coordination required to move a single agricultural product from a remote desert farm into global circulation.
+                                An incredibly clear, visually engaging 30-minute breakdown by billionaire investor Ray Dalio on how credit, interest rates, and the global economic engine actually function.
                             </p>
                             <div class="flex items-center gap-2 text-cyan-600 dark:text-cyan-400 text-sm font-semibold">
                                 Watch Documentary <ExternalLink size={16} />
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Articles / Books -->
                 <div class="md:col-span-4 flex flex-col gap-8">
@@ -63,14 +63,18 @@ import { BookOpen, FileText, PlayCircle, ExternalLink } from 'lucide-react';
                             <div class="w-8 h-8 rounded-lg bg-cyan-50 dark:bg-cyan-900/30 flex items-center justify-center">
                                 <FileText className="text-cyan-500" size={16} />
                             </div>
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Reports</h3>
+                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Featured Articles</h3>
                         </div>
                         <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3">
-                            <li class="hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer transition-colors flex items-start gap-2">
-                                <span class="text-cyan-500 mt-1">&rarr;</span> UN World Economic Situation 2026
+                            <li>
+                                <a href="https://hbr.org/2020/09/global-supply-chains-in-a-post-pandemic-world" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-start gap-2">
+                                    <span class="text-cyan-500 mt-1">&rarr;</span> HBR: Global Supply Chains in a Post-Pandemic World
+                                </a>
                             </li>
-                            <li class="hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer transition-colors flex items-start gap-2">
-                                <span class="text-cyan-500 mt-1">&rarr;</span> IMF World Economic Outlook
+                            <li>
+                                <a href="https://www.bloomberg.com/news/articles/2023-01-24/the-end-of-globalization-is-a-myth-that-is-already-busted" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-start gap-2">
+                                    <span class="text-cyan-500 mt-1">&rarr;</span> Bloomberg: The End of Globalization Is a Myth
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -83,11 +87,15 @@ import { BookOpen, FileText, PlayCircle, ExternalLink } from 'lucide-react';
                             <h3 class="text-base font-bold text-slate-900 dark:text-white">Essential Books</h3>
                         </div>
                         <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3">
-                            <li class="hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer transition-colors flex items-start gap-2">
-                                <span class="text-cyan-500 mt-1">&rarr;</span> Freakonomics
+                            <li>
+                                <a href="https://freakonomics.com/books/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-start gap-2">
+                                    <span class="text-cyan-500 mt-1">&rarr;</span> Freakonomics
+                                </a>
                             </li>
-                            <li class="hover:text-cyan-600 dark:hover:text-cyan-400 cursor-pointer transition-colors flex items-start gap-2">
-                                <span class="text-cyan-500 mt-1">&rarr;</span> The Undercover Economist
+                            <li>
+                                <a href="https://timharford.com/books/undercovereconomist/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-start gap-2">
+                                    <span class="text-cyan-500 mt-1">&rarr;</span> The Undercover Economist
+                                </a>
                             </li>
                         </ul>
                     </div>
