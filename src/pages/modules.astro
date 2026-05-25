@@ -1,268 +1,259 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GdpChart from '../components/GdpChart.tsx';
+import InflationChart from '../components/InflationChart.tsx';
+import CentralBankDash from '../components/CentralBankDash.tsx';
+import GlobalTradeViz from '../components/GlobalTradeViz.tsx';
+import ScrollProgress from '../components/ScrollProgress.tsx';
 ---
 
 <Layout title="Curriculum | GNEDHub">
-    <div class="flex flex-col lg:flex-row gap-12 relative items-start">
-        <!-- Sticky Side Navigation -->
-        <aside class="hidden lg:block sticky top-24 w-64 shrink-0">
-            <div class="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 shadow-sm">
-                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Course Progress</h3>
-                <nav class="space-y-4 relative">
-                    <!-- Progress Line -->
-                    <div class="absolute left-2.5 top-2 bottom-2 w-px bg-slate-200 -z-10"></div>
-                    <div class="absolute left-2.5 top-2 h-1/4 w-px bg-cyan-500 -z-10 transition-all duration-300" id="progress-line"></div>
+    <!-- Snap Container -->
+    <div class="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth relative no-scrollbar">
+        
+        <!-- Module 1 -->
+        <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
+            <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                <!-- Left: Content -->
+                <div class="flex flex-col justify-center max-w-2xl">
+                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 1 &middot; 6 Min</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">GDP & The Speed of Growth</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">GDP measures the total dollar value of everything a country produces, acting as the ultimate scorecard for national economic health.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Everyday Analogy
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">Think of GDP like a local bakery’s daily revenue. It counts the total value of all the bread, cakes, and coffee sold in a day. If revenue goes up, the bakery is thriving, the owner can hire more staff, and the town is happy. If revenue drops, the bakery has to cut back on flour orders and lay off the delivery driver. GDP is just this concept scaled up to an entire nation.</p>
+                        </div>
 
-                    <a href="#module-1" class="flex items-start gap-4 group">
-                        <div class="w-5 h-5 rounded-full bg-white border-2 border-cyan-500 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform"></div>
                         <div>
-                            <span class="text-xs font-semibold text-cyan-600 block mb-0.5">Module 1</span>
-                            <span class="text-sm text-slate-700 font-medium group-hover:text-cyan-700 transition-colors">GDP & Growth</span>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Scannable Lesson
+                            </h3>
+                            <ul class="space-y-5">
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">The Big Four Ingredients:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">GDP is calculated by adding up Consumer Spending, Business Investment, Government Spending, and Net Exports.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Real vs. Nominal:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">"Nominal" counts raw numbers. "Real" GDP adjusts for inflation, telling the true story of growth.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">The Recession Trigger:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">When real GDP shrinks for two consecutive quarters, the economy officially enters a recession.</span>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
-                    <a href="#module-2" class="flex items-start gap-4 group">
-                        <div class="w-5 h-5 rounded-full bg-white border-2 border-slate-300 flex-shrink-0 mt-0.5 group-hover:border-cyan-400 transition-colors"></div>
-                        <div>
-                            <span class="text-xs font-semibold text-slate-500 block mb-0.5">Module 2</span>
-                            <span class="text-sm text-slate-600 font-medium group-hover:text-cyan-700 transition-colors">Inflation</span>
+
+                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> If a country imports significantly more goods than it exports to the rest of the world, how does that imbalance directly impact its overall GDP "score"?</p>
                         </div>
-                    </a>
-                    <a href="#module-3" class="flex items-start gap-4 group">
-                        <div class="w-5 h-5 rounded-full bg-white border-2 border-slate-300 flex-shrink-0 mt-0.5 group-hover:border-cyan-400 transition-colors"></div>
-                        <div>
-                            <span class="text-xs font-semibold text-slate-500 block mb-0.5">Module 3</span>
-                            <span class="text-sm text-slate-600 font-medium group-hover:text-cyan-700 transition-colors">Central Banks</span>
-                        </div>
-                    </a>
-                    <a href="#module-4" class="flex items-start gap-4 group">
-                        <div class="w-5 h-5 rounded-full bg-white border-2 border-slate-300 flex-shrink-0 mt-0.5 group-hover:border-cyan-400 transition-colors"></div>
-                        <div>
-                            <span class="text-xs font-semibold text-slate-500 block mb-0.5">Module 4</span>
-                            <span class="text-sm text-slate-600 font-medium group-hover:text-cyan-700 transition-colors">Global Trade</span>
-                        </div>
-                    </a>
-                </nav>
+                    </div>
+                </div>
+                
+                <!-- Right: Interactive Sticky Zone -->
+                <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col">
+                    <div class="mb-6 flex justify-between items-center">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">The Bakery Economy Slider</h4>
+                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
+                    </div>
+                    <div class="flex-grow w-full relative">
+                        <GdpChart client:load />
+                    </div>
+                </div>
             </div>
-        </aside>
+        </section>
 
-        <!-- Main Content -->
-        <div class="flex-grow max-w-3xl space-y-16 pb-24">
-            
-            <!-- Module 1 -->
-            <section id="module-1" class="scroll-mt-24">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-600 text-xs font-bold tracking-widest uppercase mb-4">
-                    Module 1 &middot; 6 Min
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">GDP & The Speed of Growth</h2>
-                
-                <div class="prose prose-slate max-w-none space-y-6">
-                    <p class="text-slate-700 leading-relaxed bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 shadow-sm">
-                        <strong class="text-slate-900">Core Concept:</strong> Gross Domestic Product (GDP) measures the total dollar value of everything a country produces, acting as the ultimate scorecard for national economic health.
-                    </p>
+        <!-- Module 2 -->
+        <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
+            <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                <div class="flex flex-col justify-center max-w-2xl">
+                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 2 &middot; 5 Min</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Inflation & The Invisible Tax</h2>
                     
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Everyday Analogy</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            Think of GDP like a local bakery’s daily revenue. It counts the total value of all the bread, cakes, and coffee sold in a day. If revenue goes up, the bakery is thriving, the owner can hire more staff, and the town is happy. If revenue drops, the bakery has to cut back on flour orders and lay off the delivery driver. GDP is just this concept scaled up to an entire nation.
-                        </p>
-                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">Inflation is the gradual loss of purchasing power as the general price level of goods and services rises over time.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Everyday Analogy
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">Imagine a cup of coffee stays the exact same physical size, but every year, the barista uses a slightly smaller measuring scoop for the beans. You hand over the exact same amount of money, but you get less caffeine. Inflation is the shrinking scoop; it means your money buys less today than it did yesterday.</p>
+                        </div>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Scannable Lesson</h3>
-                        <ul class="space-y-4 list-none pl-0">
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">The Big Four Ingredients:</strong> GDP is calculated by adding up four main things: Consumer Spending (you buying a laptop), Business Investment (a company buying new factory robots), Government Spending (building a new highway), and Net Exports (what we sell abroad minus what we buy).
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Real vs. Nominal:</strong> "Nominal" GDP counts the raw numbers. "Real" GDP adjusts for inflation. Going back to our bakery: if revenue grew 10% but the cost of flour also rose 10%, the bakery didn't actually grow. Real GDP tells us the true story.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">The Recession Trigger:</strong> When a country’s real GDP shrinks for two consecutive quarters (six months), the economy officially enters a recession.
-                            </li>
-                        </ul>
-                    </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Scannable Lesson
+                            </h3>
+                            <ul class="space-y-5">
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Demand-Pull Inflation:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Too much money chasing too few goods. E.g., sudden bonuses spiking limited concert ticket prices.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Cost-Push Inflation:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Occurs when the cost to produce goods rises (e.g., a drought making wheat expensive).</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Wage-Price Spiral:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">A dangerous loop where rising living costs cause demands for higher wages, forcing further price hikes.</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="bg-cyan-50/50 border border-cyan-100 rounded-xl p-6 mt-8">
-                        <h4 class="text-sm font-bold text-cyan-700 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
-                            Interactive Data Exploration
-                        </h4>
-                        <p class="text-slate-700 text-sm mb-4"><strong class="text-slate-900">The Bakery Economy Slider.</strong> A web widget featuring four interactive sliders (Consumers, Businesses, Government, Imports/Exports). As the user drags the sliders left or right, a dynamic "Total GDP" bar responds in real-time, changing from green (growth) to red (recession).</p>
-                        <div class="h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-xs italic">
-                            [Interactive Widget Placeholder]
+                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> Why might central banks argue that a tiny bit of predictable inflation (around 2% a year) is healthier than zero inflation or deflation?</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="border-t border-slate-200 pt-6">
-                        <p class="text-slate-700 italic"><strong class="text-slate-900 not-italic">The Retention Check:</strong> If a country imports significantly more goods than it exports to the rest of the world, how does that imbalance directly impact its overall GDP "score"?</p>
+                <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col">
+                    <div class="mb-6 flex justify-between items-center">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Time-Travel Shopping Basket</h4>
+                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
+                    </div>
+                    <div class="flex-grow w-full relative">
+                        <InflationChart client:load />
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Module 2 -->
-            <section id="module-2" class="scroll-mt-24 pt-8 border-t border-slate-200">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-600 text-xs font-bold tracking-widest uppercase mb-4">
-                    Module 2 &middot; 5 Min
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">Inflation & The Invisible Tax</h2>
-                
-                <div class="prose prose-slate max-w-none space-y-6">
-                    <p class="text-slate-700 leading-relaxed bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 shadow-sm">
-                        <strong class="text-slate-900">Core Concept:</strong> Inflation is the gradual loss of purchasing power as the general price level of goods and services rises over time.
-                    </p>
+        <!-- Module 3 -->
+        <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
+            <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                <div class="flex flex-col justify-center max-w-2xl">
+                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 3 &middot; 7 Min</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Central Banks & The Cost of Money</h2>
                     
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Everyday Analogy</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            Imagine a cup of coffee stays the exact same physical size, but every year, the barista uses a slightly smaller measuring scoop for the beans. You hand over the exact same amount of money, but you get less caffeine. Inflation is the shrinking scoop; it means your money buys less today than it did yesterday.
-                        </p>
-                    </div>
+                    <div class="space-y-8">
+                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">Monetary Policy is how central banks control the supply of money and adjust interest rates to either stimulate a sluggish economy or cool down an overheated one.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Everyday Analogy
+                            </h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed font-light">A Central Bank is like the driver of a car navigating a winding mountain road, using two pedals. The Gas Pedal (lowering interest rates) speeds up borrowing and spending. The Brake Pedal (raising interest rates) slows down borrowing to cool the engine.</p>
+                        </div>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Scannable Lesson</h3>
-                        <ul class="space-y-4 list-none pl-0">
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Demand-Pull Inflation:</strong> This happens when there is "too much money chasing too few goods." If everyone suddenly gets a bonus and wants to buy a limited number of concert tickets, the ticket prices will instantly skyrocket.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Cost-Push Inflation:</strong> This occurs when the cost to produce goods rises. If a global drought ruins the wheat harvest, flour becomes expensive, and bakers must raise bread prices to survive.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">The Wage-Price Spiral:</strong> A dangerous loop where rising living costs cause workers to demand higher wages. To pay those higher wages, businesses raise prices again, keeping the cycle spinning.
-                            </li>
-                        </ul>
-                    </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Scannable Lesson
+                            </h3>
+                            <ul class="space-y-5">
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">The Base Rate:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Central banks set the rate at which commercial banks lend to each other, dictating the cost of every mortgage and loan.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Cheap Money:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Low rates make borrowing cheap. People buy houses, boosting GDP but risking inflation.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Expensive Money:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">High rates make borrowing painful. Spending stops, crushing inflation but risking a recession.</span>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="bg-cyan-50/50 border border-cyan-100 rounded-xl p-6 mt-8">
-                        <h4 class="text-sm font-bold text-cyan-700 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Interactive Data Exploration
-                        </h4>
-                        <p class="text-slate-700 text-sm mb-4"><strong class="text-slate-900">The Time-Travel Shopping Cart.</strong> A visual widget where users select a basket of everyday goods. Users drag a timeline slider from 1980 to 2026 to watch the exact same physical basket require an increasingly larger stack of digital cash to purchase.</p>
-                        <div class="h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-xs italic">
-                            [Interactive Timeline Placeholder]
+                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> If the central bank hits the "brake pedal", who benefits immediately: someone saving cash, or someone trying to buy a house?</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="border-t border-slate-200 pt-6">
-                        <p class="text-slate-700 italic"><strong class="text-slate-900 not-italic">The Retention Check:</strong> Why might central banks argue that a tiny bit of predictable inflation (around 2% a year) is actually healthier for an economy than zero inflation or deflation?</p>
+                <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col items-center justify-center">
+                    <div class="w-full mb-6 flex justify-between items-center absolute top-8 left-8 right-8 px-0">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Interest Rate Dashboard</h4>
+                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
+                    </div>
+                    <div class="w-full">
+                        <CentralBankDash client:load />
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Module 3 -->
-            <section id="module-3" class="scroll-mt-24 pt-8 border-t border-slate-200">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-600 text-xs font-bold tracking-widest uppercase mb-4">
-                    Module 3 &middot; 7 Min
-                </div>
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">Central Banks & The Cost of Money</h2>
-                
-                <div class="prose prose-slate max-w-none space-y-6">
-                    <p class="text-slate-700 leading-relaxed bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 shadow-sm">
-                        <strong class="text-slate-900">Core Concept:</strong> Monetary Policy is how central banks control the supply of money and adjust interest rates to either stimulate a sluggish economy or cool down an overheated one.
-                    </p>
+        <!-- Module 4 -->
+        <section class="w-full min-h-screen snap-start flex items-center py-20 px-6 lg:px-12 relative">
+            <div class="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+                <div class="flex flex-col justify-center max-w-2xl">
+                    <span class="text-cyan-600 dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3 block">Module 4 &middot; 6 Min</span>
+                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">Global Trade & The Ripple Effect</h2>
                     
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Everyday Analogy</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            A Central Bank is like the driver of a car navigating a winding mountain road, using two pedals. The Gas Pedal (lowering interest rates) speeds up borrowing and spending when the economy is sluggish. The Brake Pedal (raising interest rates) slows down borrowing to cool the engine when inflation runs too hot.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Scannable Lesson</h3>
-                        <ul class="space-y-4 list-none pl-0">
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">The Base Rate:</strong> Central banks don't set your credit card rate directly. They set the "base rate"—the rate at which commercial banks lend to each other. This sets off a domino effect that dictates the cost of every mortgage, car loan, and business line of credit.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Cheap Money = High Activity:</strong> When rates are low, saving money yields nothing, and borrowing is cheap. People buy houses, and businesses expand. This boosts GDP but risks triggering inflation.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Expensive Money = Cooling Down:</strong> When rates are high, borrowing becomes painful. People stop spending and start saving. Businesses freeze hiring. This successfully crushes inflation but risks triggering a recession.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-cyan-50/50 border border-cyan-100 rounded-xl p-6 mt-8">
-                        <h4 class="text-sm font-bold text-cyan-700 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                            Interactive Data Exploration
-                        </h4>
-                        <p class="text-slate-700 text-sm mb-4"><strong class="text-slate-900">The Economy Dashboard Game.</strong> Users act as the Central Bank Chair facing a randomized scenario. They must drag a "Base Interest Rate" slider up or down to stabilize the economy, watching animated gauges react to their policy choices.</p>
-                        <div class="h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-xs italic">
-                            [Interactive Dashboard Placeholder]
+                    <div class="space-y-8">
+                        <div class="bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] p-6 rounded-2xl">
+                            <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">Core Concept</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed font-light">The modern global economy relies on highly interconnected Supply Chains where countries specialize in specific industries.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+                                <span class="w-1 h-5 bg-cyan-500 rounded-full"></span>
+                                The Scannable Lesson
+                            </h3>
+                            <ul class="space-y-5">
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Comparative Advantage:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Countries trade because it's mathematically efficient. Specialization increases overall global output.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Supply Chain Shocks:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">A single blocked canal or regional crisis can shut down factories half a world away due to "Just-in-Time" delivery.</span>
+                                </li>
+                                <li class="relative pl-6">
+                                    <div class="absolute w-1.5 h-1.5 rounded-full bg-cyan-500 left-0 top-2"></div>
+                                    <strong class="text-slate-800 dark:text-slate-200">Tariffs & Protectionism:</strong> <span class="text-slate-600 dark:text-slate-400 font-light">Taxes on imported goods protect local jobs but inherently raise prices for everyday consumers.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="border-t border-slate-200 dark:border-slate-800 pt-6">
+                            <p class="text-slate-700 dark:text-slate-300 font-medium italic"><span class="text-cyan-600 dark:text-cyan-400 not-italic uppercase text-xs tracking-widest block mb-1">Retention Check</span> If a government places a massive tariff on imported steel, who ultimately pays that tax?</p>
                         </div>
                     </div>
-
-                    <div class="border-t border-slate-200 pt-6">
-                        <p class="text-slate-700 italic"><strong class="text-slate-900 not-italic">The Retention Check:</strong> If the central bank aggressively hits the "brake pedal" and raises interest rates today, who benefits more immediately: someone saving cash for a down payment, or someone trying to buy a house with a mortgage?</p>
-                    </div>
                 </div>
-            </section>
 
-            <!-- Module 4 -->
-            <section id="module-4" class="scroll-mt-24 pt-8 border-t border-slate-200">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-600 text-xs font-bold tracking-widest uppercase mb-4">
-                    Module 4 &middot; 6 Min
+                <div class="lg:sticky lg:top-24 h-[500px] lg:h-[calc(100vh-12rem)] max-h-[800px] w-full bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] rounded-3xl p-8 flex flex-col justify-center">
+                    <div class="w-full mb-6 flex justify-between items-center absolute top-8 left-8 right-8 px-0">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Supply Chain Network</h4>
+                        <span class="px-2 py-1 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-600 dark:text-cyan-400 text-xs font-semibold rounded-md border border-cyan-100 dark:border-cyan-800">Live Widget</span>
+                    </div>
+                    <GlobalTradeViz client:load />
                 </div>
-                <h2 class="text-3xl font-bold text-slate-900 mb-6">Global Trade & The Ripple Effect</h2>
-                
-                <div class="prose prose-slate max-w-none space-y-6">
-                    <p class="text-slate-700 leading-relaxed bg-white/60 backdrop-blur-md border border-slate-200 rounded-xl p-6 shadow-sm">
-                        <strong class="text-slate-900">Core Concept:</strong> The modern global economy relies on highly interconnected Supply Chains where countries specialize in specific industries, making goods cheaper but creating massive, global dependencies.
-                    </p>
-                    
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Everyday Analogy</h3>
-                        <p class="text-slate-600 leading-relaxed">
-                            Global trade is like a massive neighborhood potluck. Instead of every household spending hours making a mediocre full-course meal, one neighbor specializes in the main dish, another perfects the dessert, and another brings drinks. Everyone gets a better meal for less effort. But, if the dessert neighbor gets a flat tire, the entire party feels the shockwave.
-                        </p>
-                    </div>
+            </div>
+        </section>
 
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-900 mb-3">The Scannable Lesson</h3>
-                        <ul class="space-y-4 list-none pl-0">
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Comparative Advantage:</strong> Countries trade because it's mathematically efficient. Even if Country A is better at making both cars and clothing than Country B, Country A is better off focusing all its resources on the highly profitable cars, and trading with B for the clothes.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Supply Chain Shocks:</strong> Modern manufacturing relies on "Just-in-Time" delivery. A single blocked canal or regional crisis can shut down factories half a world away.
-                            </li>
-                            <li class="relative pl-6 border-l-2 border-slate-200">
-                                <div class="absolute w-2 h-2 rounded-full bg-cyan-500 -left-[5px] top-2"></div>
-                                <strong class="text-slate-800">Tariffs & Protectionism:</strong> A tariff is a tax slapped on imported goods, designed to make foreign goods more expensive. While it protects local jobs, it inherently raises prices for everyday consumers.
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-cyan-50/50 border border-cyan-100 rounded-xl p-6 mt-8">
-                        <h4 class="text-sm font-bold text-cyan-700 uppercase tracking-wide mb-2 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Interactive Data Exploration
-                        </h4>
-                        <p class="text-slate-700 text-sm mb-4"><strong class="text-slate-900">The Build-a-Smartphone Map.</strong> An interactive world map. Sliders allow the user to inject "Trade Tariffs" or "Shipping Delays" on specific routes, instantly reflecting how the final retail price spikes.</p>
-                        <div class="h-12 bg-white border border-slate-200 rounded-lg flex items-center justify-center text-slate-400 text-xs italic">
-                            [Interactive Map Placeholder]
-                        </div>
-                    </div>
-
-                    <div class="border-t border-slate-200 pt-6">
-                        <p class="text-slate-700 italic"><strong class="text-slate-900 not-italic">The Retention Check:</strong> If a government places a massive tariff on imported steel to protect domestic steelworkers, who ultimately pays that tax when you go to buy a new car or a washing machine?</p>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <!-- Minimal Floating Progress Pill -->
+        <ScrollProgress client:load />
     </div>
 </Layout>
+
+<style>
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>

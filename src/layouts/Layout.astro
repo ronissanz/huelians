@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from '../components/ThemeToggle.tsx';
+
 interface Props {
 	title: string;
 }
@@ -15,37 +17,52 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script is:inline>
+            const theme = (() => {
+                if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+                    return localStorage.getItem('theme');
+                }
+                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return 'light';
+            })();
+            if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+            } else {
+                document.documentElement.classList.add('dark');
+            }
+            window.localStorage.setItem('theme', theme);
+        </script>
 	</head>
-	<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col font-sans antialiased selection:bg-cyan-100 selection:text-cyan-900">
-        <!-- Ambient background glow (light mode) -->
-        <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-            <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-200/20 blur-[120px]"></div>
-            <div class="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-100/30 blur-[100px]"></div>
+	<body class="bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-50 min-h-screen flex flex-col font-sans antialiased transition-colors duration-300 selection:bg-cyan-200 selection:text-cyan-900 dark:selection:bg-cyan-900 dark:selection:text-cyan-50">
+        <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none transition-opacity duration-300">
+            <!-- Light mode blobs -->
+            <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-200/20 blur-[120px] dark:opacity-0 transition-opacity duration-500"></div>
+            <div class="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-100/30 blur-[100px] dark:opacity-0 transition-opacity duration-500"></div>
+            <!-- Dark mode blobs -->
+            <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-cyan-900/10 blur-[120px] opacity-0 dark:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-[-20%] right-[-10%] w-[40%] h-[40%] rounded-full bg-cyan-800/10 blur-[100px] opacity-0 dark:opacity-100 transition-opacity duration-500"></div>
         </div>
 
-        <nav class="sticky top-0 z-50 bg-white/60 backdrop-blur-md border-b border-slate-200">
+        <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border-b border-white/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.3)] transition-all duration-300">
             <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-                <a href="/" class="text-xl font-semibold tracking-tight text-slate-900 flex items-center gap-2">
-                    <div class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.4)]"></div>
+                <a href="/" class="text-xl font-semibold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.6)]"></div>
                     GNEDHub
                 </a>
-                <div class="flex items-center gap-8">
-                    <a href="/" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors">Home</a>
-                    <a href="/modules" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors">Modules</a>
-                    <a href="/about" class="text-sm font-medium text-slate-600 hover:text-cyan-600 transition-colors">About</a>
+                <div class="flex items-center gap-6">
+                    <a href="/" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Home</a>
+                    <a href="/modules" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Modules</a>
+                    <a href="/about" class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">About</a>
+                    <ThemeToggle client:load />
                 </div>
             </div>
         </nav>
         
-        <main class="flex-grow w-full max-w-6xl mx-auto px-6 py-12 flex flex-col">
+        <main class="flex-grow w-full">
 		    <slot />
         </main>
-
-        <footer class="border-t border-slate-200 py-8 text-center text-slate-500 text-xs tracking-wider">
-            <p>&copy; {new Date().getFullYear()} GNED07 &middot; The Global Economy</p>
-        </footer>
 	</body>
 </html>
