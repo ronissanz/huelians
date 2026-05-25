@@ -1,10 +1,10 @@
-# DeepEd: Global Economy
+# DeepEd: The Global Economy
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-deeped.vercel.app-10B981?style=for-the-badge&logo=vercel)](https://deeped.vercel.app/)
 
 An ultra-fast, high-end editorial learning platform. Currently featuring an interactive, magazine-style deep dive into the **Global Economy**. 
 
-Designed as the final project for GNED 07 The Contemporary World, this project pairs blazing-fast static site generation with smooth, buttery React animations to make academic reading feel like flipping through a premium digital magazine.
+Designed as the final project for **GNED 07 The Contemporary World**, this project pairs blazing-fast static site generation with smooth, buttery React animations to make academic reading feel like flipping through a premium digital magazine.
 
 ## The Content
 
