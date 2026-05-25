@@ -1,16 +1,10 @@
-# huelians
-Website of all time
+# GNEDHub
 
+A digital interactive platform for GNED07, built with Astro and Tailwind CSS.
+Follows a "Dark Glassmorphism" aesthetic with a strict information hierarchy.
 
-#initial commit i love latinas
-## CUM OWN - signing in
-## NIGGA MODE ON
+## How to Run
 
-
-how  to run!
-
-clone repo, navigate to project folder: cd gned-website
-
-install dependencies: npm install
-
-run: npm run dev
+1. Install dependencies: `just install`
+2. Run development server: `just dev`
+3. Build for production: `just build`
