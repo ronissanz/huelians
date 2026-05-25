@@ -1,4 +1,4 @@
-# DeepEd: Global Econ®
+# DeepEd: Global Economy
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-deeped.vercel.app-10B981?style=for-the-badge&logo=vercel)](https://deeped.vercel.app/)
 
@@ -6,7 +6,7 @@ An ultra-fast, high-end editorial learning platform. Currently featuring an inte
 
 Designed as the final project for GNED 07 The Contemporary World, this project pairs blazing-fast static site generation with smooth, buttery React animations to make academic reading feel like flipping through a premium digital magazine.
 
-## 📖 The Content
+## The Content
 
 **DeepEd** decodes the mechanics of the global economy—breaking down how GDP, inflation, central banks, and global trade actually dictate the world around you.
 
@@ -14,7 +14,7 @@ Designed as the final project for GNED 07 The Contemporary World, this project p
 * **Supplemental Resources:** Curated educational spotlights including Ray Dalio's *How The Economic Machine Works*, Harvard Business Review articles, and essential reads like *Freakonomics*.
 * **Dynamic Facts:** Bite-sized interactive trivia, such as the real-time $9.6 billion daily impact of the 2021 Suez Canal blockage.
 
-## ✨ Key Features
+## Key Features
 
 * **Editorial Aesthetics:** A cool blue color palette paired with high-contrast `DM Serif Display` typography for maximum readability.
 * **Islands Architecture:** Built on Astro to ship zero JavaScript by default, only hydrating the interactive React/Framer Motion components where strictly necessary.
@@ -22,7 +22,7 @@ Designed as the final project for GNED 07 The Contemporary World, this project p
 * **Fully Responsive:** Impeccable grid layouts that adapt seamlessly from mobile devices to ultrawide desktop monitors.
 * **Edge Ready:** Deployed globally on Vercel for instant, edge-cached load times.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Framework:** [Astro](https://astro.build/)
 * **UI Library:** [React 18](https://react.dev/)
@@ -33,7 +33,7 @@ Designed as the final project for GNED 07 The Contemporary World, this project p
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To run this project locally on your machine, follow these steps:
 
@@ -62,7 +62,7 @@ Make sure you have **Node.js** (v18.20.8+, v20.3.0+, or v22.0.0+) and **Bun** in
 4. **View locally:**
    Open your browser and navigate to `http://localhost:4321`.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 ├── public/               # Static assets (images, global fonts, etc.)
@@ -74,10 +74,3 @@ Make sure you have **Node.js** (v18.20.8+, v20.3.0+, or v22.0.0+) and **Bun** in
 └── bun.lock              # Bun lockfile for deterministic installs
 ```
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ronissanz/huelians/issues) if you want to contribute to the UI or educational content.
-
-## 📄 License
-
-This project is open-source and available under the standard MIT License.
